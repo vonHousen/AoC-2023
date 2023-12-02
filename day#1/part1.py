@@ -10,7 +10,7 @@ def deobfuscate_calibration_document(deobfuscation_func: Callable[[str], int]) -
     Args:
         deobfuscation_func: Function that perform deobfuscation process on a single line.
     """
-    with open("input_part1.txt", "r") as f:
+    with open("input.txt", "r") as f:
         calibration_document_lines = f.read().splitlines()
 
     sum_of_all_calibration_values = sum(deobfuscation_func(line) for line in calibration_document_lines)
